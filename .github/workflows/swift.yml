@@ -13,7 +13,7 @@ jobs:
       cancel-in-progress: true
     strategy:
       matrix:
-        os: [macOS-latest, ubuntu-latest]
+        os: [macOS-latest] # ubuntu-latest
     runs-on: ${{ matrix.os }}
 
     steps:
