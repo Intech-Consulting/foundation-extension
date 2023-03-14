@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import CoreTestExtension
+@testable import FoundationTestExtension
 
-final class CoreTestExtensionTests: XCTestCase {
+final class FoundationTestExtensionTests: XCTestCase {
 }

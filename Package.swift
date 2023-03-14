@@ -4,15 +4,19 @@
 import PackageDescription
 
 let package = Package(
-    name: "core-extension",
+    name: "foundation-extension",
+    platforms: [.iOS(.v14), .tvOS(.v14), .watchOS(.v7), .macOS(.v11)],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "CoreExtension",
             targets: ["CoreExtension"]),
         .library(
-            name: "CoreTestExtension",
-            targets: ["CoreTestExtension"]),
+            name: "FoundationExtension",
+            targets: ["FoundationExtension"]),
+        .library(
+            name: "FoundationTestExtension",
+            targets: ["FoundationTestExtension"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -24,14 +28,20 @@ let package = Package(
         .target(
             name: "CoreExtension",
             dependencies: []),
-        .target(
-            name: "CoreTestExtension",
-            dependencies: []),
         .testTarget(
             name: "CoreExtensionTests",
             dependencies: ["CoreExtension"]),
+        .target(
+            name: "FoundationExtension",
+            dependencies: []),
+        .target(
+            name: "FoundationTestExtension",
+            dependencies: []),
         .testTarget(
-            name: "CoreTestExtensionTests",
-            dependencies: ["CoreTestExtension"]),
+            name: "FoundationExtensionTests",
+            dependencies: ["FoundationExtension"]),
+        .testTarget(
+            name: "FoundationTestExtensionTests",
+            dependencies: ["FoundationTestExtension"]),
     ]
 )
