@@ -66,7 +66,7 @@ extension NSObjectProtocol where Self: NSObject {
 extension NSObjectProtocol {
     /// Same as retain(), which the compiler no longer lets us call:
     @discardableResult
-    func retainMe() -> Self {
+    public func retainMe() -> Self {
         _ = Unmanaged.passRetained(self)
         return self
     }
@@ -75,7 +75,7 @@ extension NSObjectProtocol {
     ///
     /// This function does an autorelease() rather than release() to give you more flexibility.
     @discardableResult
-    func releaseMe() -> Self {
+    public func releaseMe() -> Self {
         _ = Unmanaged.passUnretained(self).autorelease()
         return self
     }

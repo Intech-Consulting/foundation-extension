@@ -9,11 +9,11 @@
 import Foundation
 
 extension Bool {
-    var toString: String {
+    public var toString: String {
         (self == true) ? "true" : "false"
     }
 
-    func toogle() -> Bool {
+    public func toogle() -> Bool {
         !self
     }
 }
