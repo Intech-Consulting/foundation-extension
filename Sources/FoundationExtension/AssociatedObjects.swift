@@ -58,9 +58,9 @@ private class Associated<T>: NSObject {
     }
 }
 
-protocol Associable {}
+public protocol Associable {}
 
-extension Associable where Self: AnyObject {
+public extension Associable where Self: AnyObject {
     func getAssociatedObject<T>(_ key: UnsafeRawPointer) -> T? {
         (objc_getAssociatedObject(self, key) as? Associated<T>).map { $0.value }
     }

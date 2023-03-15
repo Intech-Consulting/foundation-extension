@@ -9,23 +9,23 @@
 import Foundation
 
 extension Bundle {
-    var bundleName: String? {
+    public var bundleName: String? {
         infoDictionary?["CFBundleName"] as? String
     }
 
-    var appName: String? {
+    public var appName: String? {
         infoDictionary?["CFBundleDisplayName"] as? String
     }
 
-    var releaseVersionNumber: String? {
+    public var releaseVersionNumber: String? {
         infoDictionary?["CFBundleShortVersionString"] as? String
     }
 
-    var buildVersionNumber: String? {
+    public var buildVersionNumber: String? {
         infoDictionary?["CFBundleVersion"] as? String
     }
 
-    var appEnvironement: String? {
+    public var appEnvironment: String? {
         infoDictionary?["WCAppName"] as? String
     }
 }
